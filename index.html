@@ -1,226 +1,344 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mulugeta Emiru | Web Developer Portfolio</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
-    <!-- ==== SOCIAL ICONS WITH LABELS ==== -->
+    <!-- Google Fonts - Poppins (modern & clean) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
     <style>
-        body{
-            background-color: aqua;
+        :root {
+            --primary: #00d4ff;
+            --dark: #121212;
+            --light: #f8f9fa;
+            --gray: #333;
+            --accent: #ff6b6b;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+        }
+
+        nav a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 3rem 0 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 100px;
+            height: 5px;
+            background: var(--primary);
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            opacity: 0.95;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.4s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-body h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .tags {
+            margin: 1rem 0;
+        }
+
+        .tags span {
+            background: var(--primary);
+            color: black;
+            padding:  padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+        }
+
+        .card-links a {
+            display: inline-block;
+            margin: 0.5rem 0.5rem 0 0;
+            padding: 0.6rem 1.2rem;
+            background: var(--primary);
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .card-links a:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 2rem;
             flex-wrap: wrap;
-            margin: 1.5rem 0;
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
         .icon-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
+            color: white;
             text-decoration: none;
-            color: #333;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: transform 0.2s;
+            transition: 0.3s;
         }
 
         .icon-item i {
-            font-size: 2rem;
-            margin-bottom: 0.4rem;
-            transition: transform 0.2s;
-        }
-
-        .icon-item:hover {
-            transform: translateY(-4px);
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: 0.3s;
         }
 
         .icon-item:hover i {
-            transform: scale(1.2);
+            transform: scale(1.3) translateY(-5px);
         }
 
-        /* Brand Colors */
-        .fa-telegram   { color: #0088cc; }
-        .fa-tiktok     { color: black; }
-        .fa-youtube    { color: red; }
-        .fa-facebook   { color: #1877f2; }
-        .fa-instagram  { color: #e4405f; }
-        .fa-whatsapp   { color: #25d366; }
-        .fa-comment-dots { color: #00c300; } /* Imo */
-
-        /* Contact Info Icons */
         .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            width: 30px;
             text-align: center;
+            font-size: 1.3rem;
+            margin: 3rem 0;
         }
 
-        .contact-item a {
-            color: #0066cc;
+        .contact-info a {
+            color: var(--primary);
             text-decoration: none;
         }
 
-        .contact-item a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
 
-        .fa-phone { color: #25d366; }    /* WhatsApp green */
-        .fa-envelope { color: #d14836; } /* Gmail red */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0,0,0,0.5);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav ul { gap: 1rem; flex-direction: column; align-items: center; }
+            nav a { padding: 0.8rem 1.5rem; }
+        }
     </style>
 </head>
 <body>
 
-<!-- ==================== HEADER ==================== -->
-<header class="site-header">
-    <nav class="navbar">
-        <ul>
-          <li><a href="header.html" target="new">header</a></li>
-            <li><a href="home.html" target="new">Home</a></li>
-            <li><a href="about.html" target="new">About</a></li>
-            <li><a href="My project.html" target="new">My project</a></li>
-            <li><a href="contact.html" target="new">Contact</a></li>
-          <li><a href="footer.html" target="new">footer</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- ==================== HOME SECTION ==================== -->
-<section id="home" class="section">
-    <h1>This page is my web programming portfolio</h1>
+    <main>
+        <section id="home">
+            <h1>Mulugeta Emiru</h1>
+            <p class="intro">
+                Full Stack Web Developer | HTML • CSS • JavaScript<br>
+                Welcome to my personal portfolio
+            </p>
+        </section>
 
-    <div id="homeParagraph" class="collapsible">
-        <p>
-            My name is <strong>Mulugeta Emiru</strong>, my father’s name is <strong>Emiru Agengew</strong>
-            and my mother’s name is <strong>Dinke Mosissa</strong>.
-            I was born on <strong>September 23, 1993</strong> in
-            <strong>Benishangul Gumuz regional state</strong>.
-        </p>
-    </div>
-</section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="intro">
+                My name is <strong>Mulugeta Emiru</strong>, born on September 23, 1993 in Benishangul Gumuz, Ethiopia.
+                I'm a passionate self-taught web developer constantly learning and building real-world projects.
+                I love clean code, beautiful designs, and turning ideas into reality.
+            </p>
+        </section>
 
-<!-- ==================== ABOUT SECTION ==================== -->
-<section id="about" class="section">
-    <h2 style="background-color: goldenrod; display: inline-block; padding: 0 10px;">About Me</h2>
-    <p>
-        I am a passionate web developer learning HTML, CSS, JavaScript, and more. 
-        This portfolio showcases my journey and projects.
-    </p>
-</section>
+        <section id="projects">
+            <h2>My Projects</h2>
 
-<!-- ==================== PAGE SECTION ==================== -->
-<section id="page" class="section">
-    <h2 style="background-color: blue; color: white; display: inline-block; padding: 0 10px;">My Projects</h2>
-     
-    <div class="project-card">
-        <img src="images/quiz-app.png" alt="Quiz App">
-        <div class="card-body">
-            <h3>Quiz App</h3>
-            <p>Interactive quiz with timer and score tracking.</p>
-            <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://mulugetaemiru.github.io/quiz-app/quiz-app.png" alt="Quiz App">
+                    <div class="card-body">
+                        <h3>Interactive Quiz App</h3>
+                        <p>A fully functional quiz with timer, score tracking, and beautiful UI.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://mulugetaemiru.github.io/quiz-app" target="_blank">Live Demo</a>
+                            <a href="https://github.com/mulugetaemiru/quiz-app" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects here in the future -->
             </div>
-            <div class="card-links">
-                <a href="https://mulugetaemiru.github.io/quiz-app" target="_blank">Live Demo</a>
-                <a href="https://github.com/mulugetaemiru/quiz-app" target="_blank">GitHub</a>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Connect</h2>
+
+            <div class="social-icons">
+                <a href="https://t.me/Hello_7565" target="_blank" class="icon-item">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://tiktok.com/@yourusername" target="_blank" class="icon-item">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://youtube.com/@yourusername" target="_blank" class="icon-item">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://facebook.com/yourusername" target="_blank" class="icon-item">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://instagram.com/yourusername" target="_blank" class="icon-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://wa.me/251914795126" target="_blank" class="icon-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://imo.im/" target="_blank" class="icon-item">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>Imo</span>
+                </a>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- ==================== CONTACT SECTION ==================== -->
-<section id="contact" class="section">
-    <h2 style="background-color: green; color: white; display: inline-block; padding: 0 10px;">Contact Me</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> <a href="tel:+251914795126">+251 914 795 126</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:mulgetaemiru209@gmail.com">mulgetaemiru209@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
 
-    <!-- Social icons with names below -->
-    <div class="social-icons">
-        <a href="https://t.me/Hello_7565" target="_blank" class="icon-item">
-            <i class="fab fa-telegram"></i>
-            <span style="color:rgb(0, 36, 128)">Telegram</span>
-        </a>
-        <a href="https://tiktok.com/@yourusername" target="_blank" class="icon-item">
-            <i class="fab fa-tiktok"></i>
-            <span style="color:black">TikTok</span>
-        </a>
-        <a href="https://youtube.com/@yourusername" target="_blank" class="icon-item">
-            <i class="fab fa-youtube"></i>
-            <span style="color:red">MulerYouTube</span>
-        </a>
-        <a href="https://facebook.com/yourusername" target="_blank" class="icon-item">
-            <i class="fab fa-facebook"></i>
-            <span style="color:rgb(47, 0, 128)">Facebook</span>
-        </a>
-        <a href="https://instagram.com/yourusername" target="_blank" class="icon-item">
-            <i class="fab fa-instagram"></i>
-            <span style="color:rgb(128, 0, 49)">Instagram</span>
-        </a>
-        <a href="https://wa.me/251914795126" target="_blank" class="icon-item">
-            <i class="fab fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
-        <a href="https://imo.im/Mulgeta%20Emiru" target="_blank" class="icon-item">
-            <i class="fas fa-comment-dots"></i>
-            <span style="color:green">Imo</span>
-        </a>
-    </div>
+    <footer>
+        <p>© <span id="year"></span> Mulugeta Emiru. Made with ❤️ and Code</p>
+    </footer>
 
-    <!-- Email & Phone with Icons -->
-    <div class="contact-info">
-        <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <a href="tel:+251914795126">+251 914 795 126</a>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:mulgetaemiru209@gmail.com">mulgetaemiru209@gmail.com</a>
-        </div>
-    </div>
-    
-</section>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="site-footer">
-    <p style="background-color: gold; color: white; display: inline-block; padding: 0 10px; margin: 0;">
-        © <span id="year"></span> Mulugeta Emiru. All rights reserved.
-    </p>
-</footer>
-
-<script>
-    // Auto-update year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Home click → toggle paragraph
-    const homeLink  = document.querySelector('a[href="#home"]');
-    const paragraph = document.getElementById('homeParagraph');
-
-    homeLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        paragraph.classList.toggle('open');
-        document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
-    });
-</script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </body>
 </html>
-
-
