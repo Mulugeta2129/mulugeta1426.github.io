@@ -1,221 +1,112 @@
- <!DOCTYPE html>
-<html lang="en">
+  
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mulu from Wombera</title>
-    <!-- Font Awesome CDN for social media icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Contact - Mulugeta Emiru</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
+            margin: 40px;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .section {
-            text-align: center;
-        }
-
-        h2 {
-            background-color: green;
-            color: white;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 25px;
-            margin-bottom: 30px;
-            font-size: 24px;
-        }
-
-        .contact-info {
-            text-align: left;
-            font-size: 16px;
+            background: #ffffff;
             color: #333;
-            margin-bottom: 20px;
+            line-height: 1.8;
         }
-
-        .contact-info strong {
-            color: green;
+        h1 {
+            color: #1e3c72;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 6px solid #2a5298;
+            margin: 20px 0;
+            max-width: 600px;
+        }
+        .contact-info p {
+            margin: 15px 0;
             font-size: 18px;
         }
-
-        .social-icons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
+        .contact-info strong {
+            color: #1e3c72;
         }
-
-        .icon-item {
-            display: flex;
-            flex-direction: column;
+        .social-links {
+            margin-top: 50px;
+        }
+        .social-links a {
+            display: inline-flex;
             align-items: center;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            min-width: 80px;
-        }
-
-        .icon-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .icon-item i {
-            font-size: 30px;
-            margin-bottom: 8px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .icon-item span {
-            font-size: 12px;
+            margin: 18px 25px 18px 0;
+            font-size: 24px;
             font-weight: bold;
-            text-align: center;
-            color: #333;
-        }
-
-        /* Social media specific colors */
-        .telegram .fa-telegram {
-            background: linear-gradient(45deg, #0088cc, #00d4ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tiktok .fa-tiktok {
-            color: #000;
-        }
-
-        .youtube .fa-youtube {
-            color: #ff0000;
-        }
-
-        .facebook .fa-facebook {
-            color: #1877f2;
-        }
-
-        .instagram .fa-instagram {
-            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .whatsapp .fa-whatsapp {
-            color: #25d366;
-        }
-
-        .imo .fa-comment-dots {
-            color: #00a300;
-        }
-
-        .email-link {
-            color: #d32f2f;
             text-decoration: none;
-            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .social-links a i {
+            margin-right: 12px;
+            font-size: 32px;
+        }
+        .social-links a:hover {
+            transform: translateY(-4px);
         }
 
-        .email-link:hover {
-            text-decoration: underline;
-        }
-
-        .telegram-username {
-            background-color: #e3f2fd;
-            padding: 8px 12px;
-            border-radius: 5px;
-            border-left: 4px solid #0088cc;
-            margin-top: 10px;
-        }
-
-        @media (max-width: 600px) {
-            .social-icons {
-                gap: 10px;
-            }
-            
-            .icon-item {
-                padding: 10px;
-                min-width: 70px;
-            }
-            
-            .icon-item i {
-                font-size: 25px;
-            }
-            
-            .icon-item span {
-                font-size: 11px;
-            }
-        }
+        /* Official Brand Colors */
+        .telegram   { color: #0088cc; }
+        .whatsapp   { color: #25D366; }
+        .imo        { color: #00BFFF; }
+        .facebook   { color: #1877F2; }
+        .tiktok     { color: #000000; }
+        .tiktok:hover { color: #FF0050; }
+        .youtube    { color: #FF0000; }
     </style>
 </head>
 <body>
-    <div class="contact-container">
-        <div class="section" id="contact">
-            <h2>Contact Me</h2>
-            
-            <!-- Personal contact info -->
-            <div class="contact-info">
-                <p><strong>Contact:</strong></p>
-                <p>Mulu from Wombera</p>
-                <p><strong>Email:</strong> <a href="mailto:mulugetaemiru209@gmail.com" class="email-link">mulugetaemiru209@gmail.com</a></p>
-                <div class="telegram-username">
-                    <strong>Telegram Username:</strong> @takur_7569
-                </div>
-            </div>
 
-            <!-- Social Media Icons -->
-            <div class="social-icons">
-                <a href="https://t.me/Hello_7565" target="_blank" class="icon-item telegram" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                    <span>Telegram</span>
-                </a>
-                
-                <a href="https://tiktok.com/@yourusername" target="_blank" class="icon-item tiktok" title="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                    <span>TikTok</span>
-                </a>
-                
-                <a href="https://youtube.com/@yourusername" target="_blank" class="icon-item youtube" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                    <span>YouTube</span>
-                </a>
-                
-                <a href="https://facebook.com/yourusername" target="_blank" class="icon-item facebook" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                    <span>Facebook</span>
-                </a>
-                
-                <a href="https://instagram.com/yourusername" target="_blank" class="icon-item instagram" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                
-                <a href="https://wa.me/251914795126" target="_blank" class="icon-item whatsapp" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-                
-                <a href="https://imo.im/Mulgeta%20Emiru" target="_blank" class="icon-item imo" title="Imo">
-                    <i class="fab fa-comment-dots"></i>
-                    <span>Imo</span>
-                </a>
-            </div>
-        </div>
+    <h1>Contact Me with</h1>
+    
+    <div class="contact-info">
+        <p><strong>Email:</strong> mulugetaemiru209@gmail.com</p>
+        <p><strong>Phone :</strong> +251914795126 <br>
+            +251717996542
+        </p>
+        <p><strong>Location:</strong> Addis Ababa, Ethiopia</p>
+         
     </div>
+    <div class="social-links">
+        <p>OR</p>
+        <p><strong>Connect with me:</strong></p>
+        
+        <a href="https://t.me/Hello_7565" target="_blank" class="telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram
+        </a>
+        
+        <a href="https://wa.me/251912345678" target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        
+        <a href="https://imo.im/yourid" target="_blank" class="imo">
+            <i class="fas fa-phone-alt"></i> Imo
+        </a>
+        
+        <a href="https://facebook.com/yourusername" target="_blank" class="facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        
+        <a href="https://tiktok.com/@yourusername" target="_blank" class="tiktok">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        
+        <a href="https://youtube.com/@yourchannel" target="_blank" class="youtube">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+    </div>
+
+    <p style="margin-top: 60px; color: #555; font-size: 18px;">
+        Feel free to message me on any platform — I reply very fast! 
+    </p>
+
 </body>
 </html>
