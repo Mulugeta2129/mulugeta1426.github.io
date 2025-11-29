@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mulu from Wombera</title>
+    <!-- Font Awesome CDN for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            text-align: center;
+        }
+
+        h2 {
+            background-color: green;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .contact-info {
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-info strong {
+            color: green;
+            font-size: 18px;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-width: 80px;
+        }
+
+        .icon-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .icon-item i {
+            font-size: 30px;
+            margin-bottom: 8px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-item span {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Social media specific colors */
+        .telegram .fa-telegram {
+            background: linear-gradient(45deg, #0088cc, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tiktok .fa-tiktok {
+            color: #000;
+        }
+
+        .youtube .fa-youtube {
+            color: #ff0000;
+        }
+
+        .facebook .fa-facebook {
+            color: #1877f2;
+        }
+
+        .instagram .fa-instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .whatsapp .fa-whatsapp {
+            color: #25d366;
+        }
+
+        .imo .fa-comment-dots {
+            color: #00a300;
+        }
+
+        .email-link {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .telegram-username {
+            background-color: #e3f2fd;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border-left: 4px solid #0088cc;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .social-icons {
+                gap: 10px;
+            }
+            
+            .icon-item {
+                padding: 10px;
+                min-width: 70px;
+            }
+            
+            .icon-item i {
+                font-size: 25px;
+            }
+            
+            .icon-item span {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="section" id="contact">
+            <h2>Contact Me</h2>
+            
+            <!-- Personal contact info -->
+            <div class="contact-info">
+                <p><strong>Contact:</strong></p>
+                <p>Mulu from Wombera</p>
+                <p><strong>Email:</strong> <a href="mailto:mulugetaemiru209@gmail.com" class="email-link">mulugetaemiru209@gmail.com</a></p>
+                <div class="telegram-username">
+                    <strong>Telegram Username:</strong> @takur_7569
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://t.me/Hello_7565" target="_blank" class="icon-item telegram" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                
+                <a href="https://tiktok.com/@yourusername" target="_blank" class="icon-item tiktok" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                
+                <a href="https://youtube.com/@yourusername" target="_blank" class="icon-item youtube" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                
+                <a href="https://facebook.com/yourusername" target="_blank" class="icon-item facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                
+                <a href="https://instagram.com/yourusername" target="_blank" class="icon-item instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                
+                <a href="https://wa.me/251914795126" target="_blank" class="icon-item whatsapp" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                
+                <a href="https://imo.im/Mulgeta%20Emiru" target="_blank" class="icon-item imo" title="Imo">
+                    <i class="fab fa-comment-dots"></i>
+                    <span>Imo</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
