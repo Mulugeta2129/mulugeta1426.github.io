@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Mulugeta Emiru | Web Developer Portfolio</title>
+    <title>Mulugeta Emiru | Web & Graphics Designer</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <!-- Google Fonts - Poppins -->
@@ -16,11 +16,7 @@
             --gray: #333;
             --accent: #ff6b6b;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -47,9 +43,9 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: 0.3s;
             padding: 0.5rem 1rem;
             border-radius: 30px;
+            transition: 0.3s;
         }
         nav a:hover {
             background: var(--primary);
@@ -80,8 +76,7 @@
         }
         .intro { text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto 3rem; opacity: 0.95; }
 
-        /* Projects Section */
-        #projects { padding: 2rem 0; }
+        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -97,15 +92,13 @@
             transition: transform 0.4s;
         }
         .project-card:hover { transform: translateY(-15px); }
-        .certificate-img {
+        .project-card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             transition: transform 0.4s ease;
         }
-        .project-card a:hover .certificate-img {
-            transform: scale(1.08);
-        }
+        .project-card a:hover img { transform: scale(1.08); }
         .card-body { padding: 1.5rem; }
         .card-body h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
         .tags { margin: 1rem 0; }
@@ -132,9 +125,10 @@
             transform: scale(1.05);
         }
 
-        /* Social & Contact */
+        /* Contact */
         .social-icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin: 3rem 0; }
-        .icon-item i { font-size: 3rem; transition: 0.3s; }
+        .icon-item { text-align: center; color: white; text-decoration: none; transition: 0.3s; }
+        .icon-item i { font-size: 3rem; display: block; margin-bottom: 0.5rem; transition: 0.3s; }
         .icon-item:hover i { transform: scale(1.3) translateY(-5px); }
         .contact-info a { color: var(--primary); text-decoration: none; }
         .contact-info a:hover { text-decoration: underline; }
@@ -164,8 +158,8 @@
         <section id="home">
             <h1>Mulugeta Emiru</h1>
             <p class="intro">
-                Full Stack Web Developer | HTML • CSS • JavaScript<br>
-                Welcome to my personal portfolio
+                Web Developer • Graphics Designer • Creative Soul<br>
+                Welcome to my world of code and art
             </p>
         </section>
 
@@ -173,34 +167,60 @@
             <h2>About Me</h2>
             <p class="intro">
                 My name is <strong>Mulugeta Emiru</strong>, born on September 23, 1993 in Benishangul Gumuz, Ethiopia.
-                I'm a passionate self-taught web developer constantly learning and building real-world projects.
-                I love clean code, beautiful designs, and turning ideas into reality.
+                I'm a passionate self-taught web developer and graphic designer who loves turning ideas into beautiful digital experiences.
             </p>
         </section>
 
-        <!-- PROJECTS SECTION - NOW WORKING! -->
+        <!-- PROJECTS SECTION - BOTH PROJECTS INCLUDED -->
         <section id="projects">
             <h2>My Projects</h2>
             <div class="projects-grid">
+
+                <!-- Project 1: Udacity Certificate -->
                 <div class="project-card">
-                     
+                    <a href="https://www.udacity.com/certificate/e/6d7da3e2-8d29-11ef-bcdd-2f9961fe5bc8" target="_blank" rel="noopener">
+                        <img src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3w8p7g9n/5y5K5wQe7iYq2iW0Qe0uQe/2f9961fe5bc8/certificate.jpg"
+                             alt="Udacity Web Programming Certificate">
+                    </a>
                     <div class="card-body">
                         <h3>Ethiocoder Web Programming Certificate</h3>
-                        <p>This is the online Web Programming course I completed on Udacity through Ethiocoder.</p>
+                        <p>Completed full Web Programming course on Udacity through Ethiocoder scholarship.</p>
                         <div class="tags">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
                         <div class="card-links">
-                            <a href="https://www.udacity.com/certificate/e/6d7da3e2-8d29-11ef-bcdd-2f9961fe5bc8"
-                               target="_blank" rel="noopener">
-                               View Certificate
+                            <a href="https://www.udacity.com/certificate/e/6d7da3e2-8d29-11ef-bcdd-2f9961fe5bc8" target="_blank" rel="noopener">
+                                View Certificate
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more projects here later -->
+
+                <!-- Project 2: Your Graphics Design Masterpiece -->
+                <div class="project-card">
+                    <a href="https://i.imgur.com/8pK3f9M.jpg" target="_blank" rel="noopener">
+                        <img src="https://i.imgur.com/8pK3f9M.jpg"
+                             alt="Mulugeta Emiru - Graphics Designer Poster">
+                    </a>
+                    <div class="card-body">
+                        <h3>Graphics Designer Identity & Poster</h3>
+                        <p>Creative self-branding design featuring personal portrait and Ethiopian cultural art elements. Made with Photoshop and love.</p>
+                        <div class="tags">
+                            <span>Photoshop</span>
+                            <span>Graphic Design</span>
+                            <span>Branding</span>
+                            <span>Digital Art</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://i.imgur.com/8pK3f9M.jpg" target="_blank" rel="noopener">
+                                View Full Size
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -219,23 +239,21 @@
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Mulugeta Emiru. Made with ❤️ and Code</p>
+        <p>© <span id="year"></span> Mulugeta Emiru. Made with Code & Creativity</p>
     </footer>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Smooth scrolling for all navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
 </body>
 </html>
-
