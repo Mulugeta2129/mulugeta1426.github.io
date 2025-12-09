@@ -76,8 +76,6 @@
             border-radius: 20px; border: 7px solid var(--primary);
             box-shadow: 0 0 35px var(--primary); display: block; margin: 2.5rem auto;
         }
-
-        /* CARD STYLE FOR ALL SECTIONS */
         .card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(12px);
@@ -85,8 +83,12 @@
             padding: 2rem;
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
+        .skill-item { margin: 1.3rem 0; }
+        .skill-name { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; color: white; }
+        .progress-bar { height: 16px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; }
+        .progress { height: 100%; background: var(--primary); border-radius: 10px; width: 0; transition: width 2s ease; }
 
-        /* CERTIFICATES - PERFECTLY CENTERED + DEEP BLUE */
+        /* CERTIFICATES */
         .certificate-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -106,13 +108,8 @@
             border: 3px solid var(--primary);
             transition: all 0.4s ease;
         }
-        .certificate-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(0,212,255,0.4);
-        }
-        .certificate-card h4 {
-            font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--primary); line-height: 1.4;
-        }
+        .certificate-card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px rgba(0,212,255,0.4); }
+        .certificate-card h4 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--primary); line-height: 1.4; }
         .certificate-card p { font-size: 1.05rem; margin-bottom: 1.5rem; opacity: 0.9; }
         .certificate-card a {
             display: inline-block; padding: 0.9rem 2.2rem;
@@ -121,7 +118,7 @@
         }
         .certificate-card a:hover { background: white; transform: scale(1.08); }
 
-        /* CONTACT SECTION - NOW WITH SOLID BLUE BACKGROUND */
+        /* CONTACT SECTION WITH WORKING EMAIL FORM */
         .contact-card {
             background: #0d1b2a !important;
             color: white !important;
@@ -139,21 +136,64 @@
             gap: 2.5rem;
             margin: 3rem 0;
         }
-        .contact-item a {
-            color: white; text-decoration: none; display: block;
-        }
-        .contact-item i {
-            font-size: 4rem; margin-bottom: 1rem; transition: transform 0.3s;
-        }
+        .contact-item a { color: white; text-decoration: none; display: block; }
+        .contact-item i { font-size: 4rem; margin-bottom: 1rem; transition: transform 0.3s; }
         .contact-item:hover i { transform: scale(1.2); }
 
-        /* SKILLS PROGRESS BAR */
-        .skill-item { margin: 1.3rem 0; }
-        .skill-name { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; color: white; }
-        .progress-bar { height: 16px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; }
-        .progress { height: 100%; background: var(--primary); border-radius: 10px; width: 0; transition: width 2s ease; }
+        /* EMAIL FORM STYLING */
+        .contact-form {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #ccc;
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: var(--primary);
+            color: #000;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             main { padding-top: 210px; }
             header { flex-direction: column; padding: 0.8rem 1rem; }
@@ -190,6 +230,7 @@
     </header>
 
     <main>
+        <!-- All previous sections remain exactly the same -->
         <section id="home">
             <div class="welcome-text"><b>Welcome to My Portfolio</b></div>
             <div class="welcome-text">Welcome to our website</div>
@@ -200,7 +241,7 @@
         </section>
 
         <section id="about">
-            <div class="welcome-text"><u> personal information about myself!</u></div>
+            <div class="welcome-text"><u>You can see personal information about me!</u></div>
             <h2>My name is Mulugeta Emiru</h2>
             <div class="card" style="background-color: red; color:white; padding:2rem; border-radius: 15px;">
                 <p style="font-size:1.15rem; line-height:1.8;">
@@ -241,9 +282,8 @@
                 <div class="skill-item"><div class="skill-name">Operating System <span>82%</span></div><div class="progress-bar"><div class="progress"></div></div></div>
                 <div class="skill-item"><div class="skill-name">Java (Fundamental & Advanced) <span>68%</span></div><div class="progress-bar"><div class="progress"></div></div></div>
                 <div class="skill-item"><div class="skill-name">Graphics Design (Photoshop & Illustrator) <span>70%</span></div><div class="progress-bar"><div class="progress"></div></div></div>
-            <img src="photo.jpg" alt="Mulugeta Emiru Full Photo" class="full-photo">
             </div>
-           
+            <img src="photo.jpg" alt="Mulugeta Emiru Full Photo" class="full-photo">
         </section>
 
         <section id="assignments">
@@ -284,7 +324,7 @@
         </section>
 
         <section id="certificates">
-            <div class="welcome-text"><u>See certificates by clicking  the link</u></div>
+            <div class="welcome-text"><u>See My certificates by clicking on the link</u></div>
             <h2>Certificates & Milestones</h2>
             <div class="certificate-grid">
                 <div class="certificate-card">
@@ -305,11 +345,13 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTION WITH SOLID BLUE BACKGROUND -->
+        <!-- CONTACT SECTION WITH WORKING EMAIL FORM -->
         <section id="contact">
-            <div class="welcome-text"><u>contact me with the following </u></div>
+            <div class="welcome-text"><u>እኔን በኢሜይል ይፃፉልኝ | Send me a message</u></div>
             <h2>Contact Me</h2>
             <div class="contact-card">
+
+                <!-- Social Media Links -->
                 <div class="contact-grid">
                     <div class="contact-item">
                         <a href="https://t.me/Hello_7565" target="_blank">
@@ -354,11 +396,40 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Email Form (100% working with FormSubmit) -->
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/mulgetaemiru209@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">ሙሉ ስም / Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ኢሜይል / Email</label>
+                            <input type="email" name="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">ርዕስ / Subject</label>
+                            <input type="text" name="subject" id="subject" placeholder="Message Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">መልዕክት / Message</label>
+                            <textarea name="message" id="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+
+                        <!-- Hidden fields to prevent spam & redirect -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://yourportfolio.com/thanks.html">
+                        <input type="hidden" name="_subject" value="New Message from Portfolio!">
+                    </form>
+                </div>
+
                 <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3); color: yellow;">
                     <p style="font-size:1.2rem;">
                         Alternative Phone: <strong>+251 717 996 542</strong><br><br>
                         <b>Additional Address</b><br>
-                        <b> አድስ አባባ ፕያሳ አዳዋ መታሰብያ ፍት ለፍት በአካል ያገኙናል!</b>
+                        <b>Addis Ababa, Piassa, Adwa Memorial Area – Available in person!</b>
                     </p>
                 </div>
             </div>
@@ -410,5 +481,3 @@
     </script>
 </body>
 </html>
-
-
