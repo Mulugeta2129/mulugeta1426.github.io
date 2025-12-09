@@ -69,8 +69,16 @@
             color: #000;
             transform: translateY(-3px);
         }
-        main { padding-top: 140px; max-width: 1100px; margin: 0 auto; padding: 1rem; }
-        section { margin-bottom: 6rem; scroll-margin-top: 160px; }
+        main { 
+            padding-top: 140px; 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 1rem; 
+        }
+        section { 
+            margin-bottom: 6rem; 
+            scroll-margin-top: 160px; 
+        }
         .welcome-text {
             font-size: 2.3rem;
             font-weight: 700;
@@ -88,11 +96,29 @@
             width: 0;
             animation: typing 3.8s steps(50) forwards, blink 0.8s infinite;
         }
-        @keyframes typing { from { width: 0; opacity: 1; } to { width: 100%; opacity: 1; } }
-        @keyframes blink { 50% { border-color: transparent; } }
+        @keyframes typing { 
+            from { width: 0; opacity: 1; } 
+            to { width: 100%; opacity: 1; } 
+        }
+        @keyframes blink { 
+            50% { border-color: transparent; } 
+        }
         h1 { font-size: 4.8rem; text-align: center; margin-bottom: 1rem; color: blue; }
         h2 { font-size: 2.8rem; text-align: center; margin: 4rem 0 2.5rem; color: var(--primary); }
         .intro { text-align: center; font-size: 1.4rem; max-width: 900px; margin: 0 auto 4rem; }
+
+        /* Full image in Skills section */
+        .skills-photo {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+            border: 6px solid var(--primary);
+            box-shadow: 0 0 30px var(--primary);
+            display: block;
+            margin: 2rem auto;
+        }
+
         .about-img {
             width: 300px;
             height: 300px;
@@ -112,10 +138,30 @@
             margin: 2rem 0;
         }
         .skill-item { margin: 1.3rem 0; }
-        .skill-name { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; color: white; }
-        .progress-bar { height: 14px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; }
-        .progress { height: 100%; background: var(--primary); border-radius: 10px; transition: width 2s ease; }
-        .certificate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .skill-name { 
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 0.5rem; 
+            font-weight: 600; 
+            color: white; 
+        }
+        .progress-bar { 
+            height: 14px; 
+            background: rgba(255,255,255,0.2); 
+            border-radius: 10px; 
+            overflow: hidden; 
+        }
+        .progress { 
+            height: 100%; 
+            background: var(--primary); 
+            border-radius: 10px; 
+            transition: width 2s ease; 
+        }
+        .certificate-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+        }
         .certificate-card {
             text-align: center;
             padding: 2rem;
@@ -142,7 +188,7 @@
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; gap: 1rem; }
             .profile-img { width: 70px; height: 70px; }
-            .about-img { width: 220px; height: 220px; }
+            .about-img, .skills-photo { width: 250px; height: auto; }
             h1 { font-size: 3.5rem; }
             .welcome-text { font-size: 1.9rem; }
         }
@@ -178,37 +224,40 @@
 
         <section id="about">
             <div class="welcome-text"><u>You can see personal information about me!</u></div>
-          
+            <img src="photo.jpg" alt="Mulugeta Emiru" class="about-img">
             <h2>My name is Mulugeta Emiru</h2>
-            <p class="intro card" style="background-color: red; border-radius: 15px; color:white; padding:2rem;">
-                I am born on September 23, 1993 in Benishangul Gumuz regional state from my father Emiru Agegnew
-                and my mother Dinke Mosissa. I complete my primary school in the small village, and secondary school
-                in the woreda town. I have take the national exam in 2014 in <u>Gilgel Beles</u> collage which is the branch of<br> <u>Assossa University</u>
-                and join to the Wachamo University.
-            </p>
+            <div class="card" style="background-color: red; color:white; padding:2rem; border-radius: 15px;">
+                <p style="font-size:1.15rem; line-height:1.8;">
+                    I was born on September 23, 1993 in Benishangul Gumuz regional state from my father <strong>Emiru Agegnew</strong>
+                    and my mother <strong>Dinke Mosissa</strong>. I completed my primary school in a small village and secondary school
+                    in the woreda town. I took the national exam in 2014 in <u>Gilgel Beles</u> college (branch of <u>Assosa University</u>)
+                    and joined <strong>Wachamo University</strong>.
+                </p>
+            </div>
         </section>
 
         <section id="goals">
             <div class="welcome-text"><u>These are my future Goals to achieve!</u></div>
             <h2>Learning Objectives & Future Goals</h2>
-            <div class="card" style="background-color: blue; color:white;">
-                <ul style="font-size:1.15rem; line-height:2; padding-left:2.5rem; color:white;">
+            <div class="card" style="background-color: blue; color:white; padding:2.5rem; border-radius: 20px;">
+                <ul style="font-size:1.15rem; line-height:2; padding-left:2.5rem;">
                     <li>System Analyser</li>
                     <li>Full-stack developer</li>
                     <li>Strengthen problem-solving and algorithm skills</li>
-                    <li>to Contribute on the cybersecurity</li>
+                    <li>Contribute to cybersecurity</li>
                     <li>Help beginners learn web development</li>
-                    <li>to be professional on network installation</li>
-                    <li>I would like to learn android developer</li>
+                    <li>Become professional in network installation</li>
+                    <li>Learn Android development</li>
                 </ul>
             </div>
         </section>
 
         <section id="skills">
-            <div class="welcome-text"><u>These are my Skills what I have been learned!</u></div>
+            <div class="welcome-text"><u>These are my Skills that I have learned!</u></div>
             <h2>Technical Skills</h2>
-            <div class="card" style="background-color: blue;">
-                <div class="skill-item"><div class="skill-name">Data analysis and algorithm <span>90%</span></div><div class="progress-bar"><div class="progress" style="width:90%"></div></div></div>
+            <img src="photo.jpg" alt="Mulugeta Emiru Full Photo" class="skills-photo">
+            <div class="card" style="background-color: blue; color:white; padding:2rem;">
+                <div class="skill-item"><div class="skill-name">Data Analysis & Algorithm <span>90%</span></div><div class="progress-bar"><div class="progress" style="width:90%"></div></div></div>
                 <div class="skill-item"><div class="skill-name">HTML <span>95%</span></div><div class="progress-bar"><div class="progress" style="width:95%"></div></div></div>
                 <div class="skill-item"><div class="skill-name">CSS <span>93%</span></div><div class="progress-bar"><div class="progress" style="width:93%"></div></div></div>
                 <div class="skill-item"><div class="skill-name">JavaScript <span>88%</span></div><div class="progress-bar"><div class="progress" style="width:88%"></div></div></div>
@@ -217,22 +266,20 @@
                 <div class="skill-item"><div class="skill-name">Operating System <span>82%</span></div><div class="progress-bar"><div class="progress" style="width:82%"></div></div></div>
                 <div class="skill-item"><div class="skill-name">Java (Fundamental & Advanced) <span>68%</span></div><div class="progress-bar"><div class="progress" style="width:68%"></div></div></div>
                 <div class="skill-item"><div class="skill-name">Graphics Design (Photoshop & Illustrator) <span>70%</span></div><div class="progress-bar"><div class="progress" style="width:70%"></div></div></div>
-             <img src="photo.jpg" alt="Mulugeta Emiru" class="about-img">
             </div>
-         
         </section>
 
         <section id="assignments">
             <div class="welcome-text"><u>These are My tasks I have done!</u></div>
             <h2>Assignments & Class Activities</h2>
-            <div class="card" style="background-color:blue; color:white;">
+            <div class="card" style="background-color:blue; color:white; padding:2rem;">
                 <ul style="font-size:1.1rem; line-height:2; padding-left:2.5rem;">
                     <li>Student dorm replacement system – Database course</li>
                     <li>Online examination system – Java course</li>
                     <li>College networking system – Network course</li>
                     <li>Online marketing website – Software Engineering course</li>
                     <li>Graphics design practice</li>
-                    <li>Learning from various online platforms such as:
+                    <li>Learning from various online platforms:
                         <ul style="list-style-type: disc; margin-top:0.5rem; padding-left:2rem;">
                             <li>EthioCoder</li>
                             <li>W3Schools & Tutorialspoint</li>
@@ -248,7 +295,7 @@
         <section id="reflection">
             <div class="welcome-text"><u>Here is My Journey</u></div>
             <h2>Self-Reflection</h2>
-            <div class="card" style="background-color: blue; color:white;">
+            <div class="card" style="background-color: blue; color:white; padding:2.5rem; border-radius: 20px;">
                 <p style="font-size:1.15rem; line-height:1.9;">
                     I started with zero knowledge and taught myself from different sources.
                     There were great challenges, but those challenges became my roadmap for the future.
@@ -260,7 +307,7 @@
         </section>
 
         <section id="certificates">
-            <div class="welcome-text"><u>see My certificates by clicking on the link</u></div>
+            <div class="welcome-text"><u>See My certificates by clicking on the link</u></div>
             <h2>Certificates & Milestones</h2>
             <div class="certificate-grid">
                 <div class="certificate-card">
@@ -293,7 +340,7 @@
         <section id="contact">
             <div class="welcome-text"><u>You can reach me through the following platforms</u></div>
             <h2>Contact Me</h2>
-            <div class="card" style="text-align:center; padding:3rem 2rem;">
+            <div class="card" style="text-align:center; padding:3rem 2rem; background: rgba(255,255,255,0.15); border-radius: 25px;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2.5rem; margin: 3rem 0;">
                     <a href="https://t.me/Hello_7565" target="_blank" style="color:white; text-decoration:none;">
                         <i class="fab fa-telegram-plane" style="font-size:4.2rem; color:#0088cc;"></i>
@@ -330,7 +377,7 @@
                     <p style="font-size:1.1rem;">
                         Alternative Phone: <strong>+251 717 996 542</strong><br><br>
                         <b>ተጨማሪ አድራሻ</b><br>
-                        <b>አዲስ አበባ ፒያሳ አዳዋ መታሰቢያ አከባቢ – በአካል ይገ�ጡን!</b>
+                        <b>አዲስ አበባ ፒያሳ አዳዋ መታሰቢያ አከባቢ – በአካል ይገኙናል!</b>
                     </p>
                 </div>
             </div>
@@ -354,13 +401,13 @@
             });
         });
 
-        // Re-play typing animation when section is visible
+        // Re-play typing animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.querySelectorAll('.welcome-text').forEach(text => {
                         text.style.animation = 'none';
-                        text.offsetHeight; // trigger reflow
+                        text.offsetHeight;
                         text.style.animation = 'typing 3.8s steps(50) forwards, blink 0.8s infinite';
                     });
                 }
@@ -371,6 +418,3 @@
     </script>
 </body>
 </html>
-
-
-
