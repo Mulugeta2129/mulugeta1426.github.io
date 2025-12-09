@@ -14,7 +14,7 @@
             background-color: yellow;
             color: blue;
             min-height: 100vh;
-            line-height: 1.5;
+            line-height: 1.6;
             overflow-x: hidden;
         }
         header {
@@ -42,9 +42,7 @@
             border: 4px solid var(--primary);
             box-shadow: 0 0 20px var(--primary);
             object-fit: cover;
-            transition: transform 0.3s ease;
         }
-        .profile-img:hover { transform: scale(1.1); }
         .profile-name {
             font-size: 1.8rem;
             font-weight: 700;
@@ -52,31 +50,58 @@
             text-shadow: 0 0 15px rgba(0,212,255,0.8);
         }
         nav ul {
-            display: flex; justify-content: center; gap: 1rem; list-style: none; flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            list-style: none;
+            flex-wrap: wrap;
         }
         nav a {
-            color: white; text-decoration: none; padding: 0.7rem 1.5rem; border-radius: 30px;
-            transition: 0.3s; font-weight: 500;
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-weight: 500;
         }
-        nav a:hover { background: var(--primary); color: #000; transform: translateY(-3px); }
-        main { padding-top: 160px; max-width: 1100px; margin: 0 auto; padding: 0.5rem; }
-        section { margin-bottom: 6rem; scroll-margin-top: 180px; padding-top: 3rem; }
+        nav a:hover {
+            background: var(--primary);
+            color: #000;
+            transform: translateY(-3px);
+        }
+        main { padding-top: 140px; max-width: 1100px; margin: 0 auto; padding: 1rem; }
+        section { margin-bottom: 6rem; scroll-margin-top: 160px; }
         .welcome-text {
-            font-size: 2.3rem; font-weight: 700; text-align: center; margin: 2rem 0 3rem;
-            color: yellow; background-color: blue; padding: 0.8rem; border-radius: 10px;
-            text-decoration: underline; opacity: 0; overflow: hidden; border-right: 4px solid var(--primary);
-            white-space: nowrap; width: 0;
+            font-size: 2.3rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 2rem 0 3rem;
+            color: yellow;
+            background-color: blue;
+            padding: 0.8rem;
+            border-radius: 10px;
+            text-decoration: underline;
+            opacity: 0;
+            overflow: hidden;
+            border-right: 4px solid var(--primary);
+            white-space: nowrap;
+            width: 0;
             animation: typing 3.8s steps(50) forwards, blink 0.8s infinite;
         }
         @keyframes typing { from { width: 0; opacity: 1; } to { width: 100%; opacity: 1; } }
         @keyframes blink { 50% { border-color: transparent; } }
-        h1 { font-size: 4.8rem; text-align: center; margin-bottom: 1rem; }
+        h1 { font-size: 4.8rem; text-align: center; margin-bottom: 1rem; color: blue; }
         h2 { font-size: 2.8rem; text-align: center; margin: 4rem 0 2.5rem; color: var(--primary); }
         .intro { text-align: center; font-size: 1.4rem; max-width: 900px; margin: 0 auto 4rem; }
         .about-img {
-            width: 300px; height: 300px; border-radius: 50%; object-fit: cover;
-            border: 8px solid var(--primary); box-shadow: 0 0 30px var(--primary);
-            display: block; margin: 2rem auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid var(--primary);
+            box-shadow: 0 0 30px var(--primary);
+            display: block;
+            margin: 2rem auto;
         }
         .card {
             background: rgba(255,255,255,0.1);
@@ -86,25 +111,40 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
             margin: 2rem 0;
         }
-        .skills-container { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
         .skill-item { margin: 1.3rem 0; }
-        .skill-name { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; }
+        .skill-name { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; color: white; }
         .progress-bar { height: 14px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; }
         .progress { height: 100%; background: var(--primary); border-radius: 10px; transition: width 2s ease; }
         .certificate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .certificate-card { text-align: center; padding: 1.8rem; background: rgba(255,255,255,0.1); border-radius: 15px; transition: transform 0.3s; }
+        .certificate-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,0,0,0.8);
+            border-radius: 15px;
+            transition: transform 0.3s;
+            color: white;
+        }
         .certificate-card:hover { transform: translateY(-12px); }
-        #contact { background: linear-gradient(145deg, blue,blue); padding: 5rem 2rem; border-radius: 30px; margin: 4rem auto; max-width: 1000px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
-        #contact .card { background: rgba(255,255,255,0.15); backdrop-filter: blur(15px); }
-        footer { text-align: center; padding: 4rem; background: rgba(0,0,0,0.7); margin-top: 8rem; color: var(--primary); }
-
+        #contact {
+            background: linear-gradient(145deg, blue, darkblue);
+            padding: 5rem 2rem;
+            border-radius: 30px;
+            margin: 4rem auto;
+            max-width: 1000px;
+        }
+        footer {
+            text-align: center;
+            padding: 4rem;
+            background: rgba(0,0,0,0.8);
+            color: var(--primary);
+            margin-top: 8rem;
+        }
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; padding: 1rem; gap: 1rem; }
+            header { flex-direction: column; text-align: center; gap: 1rem; }
             .profile-img { width: 70px; height: 70px; }
-            .profile-name { font-size: 1.6rem; }
+            .about-img { width: 220px; height: 220px; }
             h1 { font-size: 3.5rem; }
             .welcome-text { font-size: 1.9rem; }
-            .about-img { width: 220px; height: 220px; }
         }
     </style>
 </head>
@@ -131,7 +171,7 @@
     <main>
         <section id="home">
             <div class="welcome-text"><b>Welcome to My Portfolio</b></div>
-            <div class="welcome-text">እንኳን ወደ ዌብሳይ�ት ጌጻችን በደህና መጡ</div>
+            <div class="welcome-text">እንኳን ወደ ዌብሳይት ገፃችን በደህና መጡ</div>
             <h1>Mulugeta Emiru</h1>
             <p class="intro">COMPUTER SCIENCE 3rd year II semester</p>
         </section>
@@ -151,8 +191,8 @@
         <section id="goals">
             <div class="welcome-text"><u>These are my future Goals to achieve!</u></div>
             <h2>Learning Objectives & Future Goals</h2>
-            <div class="card" style="background-color: blue;">
-                <ul style="font-size:1.15rem;list-style-type: decimal; line-height:2; color: white; padding-left:2.5rem;">
+            <div class="card" style="background-color: blue; color:white;">
+                <ul style="font-size:1.15rem; line-height:2; padding-left:2.5rem; color:white;">
                     <li>System Analyser</li>
                     <li>Full-stack developer</li>
                     <li>Strengthen problem-solving and algorithm skills</li>
@@ -167,39 +207,36 @@
         <section id="skills">
             <div class="welcome-text"><u>These are my Skills what I have been learned!</u></div>
             <h2>Technical Skills</h2>
-            <div class="skills-container">
-                <div class="card">
-                    <div class="skill-item"><div class="skill-name">Data analysis and algorithm<span>90%</span></div><div class="progress-bar"><div class="progress" style="width:90%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">HTML <span>95%</span></div><div class="progress-bar"><div class="progress" style="width:95%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">CSS <span>93%</span></div><div class="progress-bar"><div class="progress" style="width:93%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">JavaScript <span>88%</span></div><div class="progress-bar"><div class="progress" style="width:88%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">fundamental and advanced database <span>96%</span></div><div class="progress-bar"><div class="progress" style="width:96%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">GitHub <span>60%</span></div><div class="progress-bar"><div class="progress" style="width:60%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">Operating system <span>82%</span></div><div class="progress-bar"><div class="progress" style="width:82%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">fundamental and advanced java<span>68%</span></div><div class="progress-bar"><div class="progress" style="width:68%"></div></div></div>
-                    <div class="skill-item"><div class="skill-name">graphics design on Adobe Photoshop & Illustrator<span>70%</span></div><div class="progress-bar"><div class="progress" style="width:70%"></div></div></div>
-                </div>
+            <div class="card" style="background-color: blue;">
+                <div class="skill-item"><div class="skill-name">Data analysis and algorithm <span>90%</span></div><div class="progress-bar"><div class="progress" style="width:90%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">HTML <span>95%</span></div><div class="progress-bar"><div class="progress" style="width:95%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">CSS <span>93%</span></div><div class="progress-bar"><div class="progress" style="width:93%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">JavaScript <span>88%</span></div><div class="progress-bar"><div class="progress" style="width:88%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">Database (Fundamental & Advanced) <span>96%</span></div><div class="progress-bar"><div class="progress" style="width:96%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">GitHub <span>60%</span></div><div class="progress-bar"><div class="progress" style="width:60%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">Operating System <span>82%</span></div><div class="progress-bar"><div class="progress" style="width:82%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">Java (Fundamental & Advanced) <span>68%</span></div><div class="progress-bar"><div class="progress" style="width:68%"></div></div></div>
+                <div class="skill-item"><div class="skill-name">Graphics Design (Photoshop & Illustrator) <span>70%</span></div><div class="progress-bar"><div class="progress" style="width:70%"></div></div></div>
             </div>
         </section>
 
         <section id="assignments">
             <div class="welcome-text"><u>These are My tasks I have done!</u></div>
             <h2>Assignments & Class Activities</h2>
-            <div class="card" style="background-color:blue;">
-                <ul style="font-size:1.1rem;list-style-type: upper-alpha; line-height:2; color: white; padding-left:2.5rem;">
-                    <li>student dorm replacement on Database course</li>
-                    <li>online examination system on java course</li>
-                    <li>collage networking system on network course</li>
-                    <li>online marketing on software engineering course</li>
-                    <li>practiced on graphics design</li>
-                    <li>learning on different online course</li>
-                    <li>also I am learning d/t online courses like
-                        <ul style="list-style-type: disc; margin-top:0.5rem;">
-                            <li>ethiocoder</li>
-                            <li>w3 school tutorialspoint</li>
-                            <li>coursera</li>
-                            <li>sololearn</li>
-                            <li>mindluster etc....</li>
+            <div class="card" style="background-color:blue; color:white;">
+                <ul style="font-size:1.1rem; line-height:2; padding-left:2.5rem;">
+                    <li>Student dorm replacement system – Database course</li>
+                    <li>Online examination system – Java course</li>
+                    <li>College networking system – Network course</li>
+                    <li>Online marketing website – Software Engineering course</li>
+                    <li>Graphics design practice</li>
+                    <li>Learning from various online platforms such as:
+                        <ul style="list-style-type: disc; margin-top:0.5rem; padding-left:2rem;">
+                            <li>EthioCoder</li>
+                            <li>W3Schools & Tutorialspoint</li>
+                            <li>Coursera</li>
+                            <li>Sololearn</li>
+                            <li>MindLuster etc.</li>
                         </ul>
                     </li>
                 </ul>
@@ -209,13 +246,13 @@
         <section id="reflection">
             <div class="welcome-text"><u>Here is My Journey</u></div>
             <h2>Self-Reflection</h2>
-            <div class="card" style="background-color: blue;">
-                <p style="font-size:1.15rem; line-height:1.9;color: white;">
+            <div class="card" style="background-color: blue; color:white;">
+                <p style="font-size:1.15rem; line-height:1.9;">
                     I started with zero knowledge and taught myself from different sources.
-                    that is true there is great challenges but those challenges are the road map for the future.
+                    There were great challenges, but those challenges became my roadmap for the future.
                     I am proud of how far I have come and excited for what is next.
-                    My strength is perseverance and attention to detail. I am always improving, always learning,
-                    and always ready to take on new challenges with a positive mindset.
+                    My strength is perseverance and attention to detail. I am always improving,
+                    always learning, and always ready to take on new challenges with a positive mindset.
                 </p>
             </div>
         </section>
@@ -224,26 +261,28 @@
             <div class="welcome-text"><u>see My certificates by clicking on the link</u></div>
             <h2>Certificates & Milestones</h2>
             <div class="certificate-grid">
-                <div class="certificate-card" style="background-color: red;">
-                    <h4>EthioCoder Web Programming HTML,CSS &JS</h4>
+                <div class="certificate-card">
+                    <h4>EthioCoder Web Programming (HTML, CSS & JS)</h4>
                     <p>Full Course Completion • 2024</p>
                     <a href="https://www.udacity.com/certificate/e/6d7da3e2-8d29-11ef-bcdd-2f9961fe5bc8" target="_blank"
                        style="display:inline-block; margin-top:0.8rem; padding:0.6rem 1.4rem; background:var(--primary); color:black; border-radius:50px; text-decoration:none; font-weight:600;">
-                       View my Certificate
+                       View Certificate
                     </a>
                 </div>
-                <div class="certificate-card" style="background-color: red;">
-                    <h4>Advanced Java Programing</h4>
+                <div class="certificate-card">
+                    <h4>Advanced Java Programming</h4>
+                    <p>MindLuster • 2024</p>
                     <a href="https://www.mindluster.com/student/certificate/5d689e7c" target="_blank"
                        style="display:inline-block; margin-top:0.8rem; padding:0.6rem 1.4rem; background:var(--primary); color:black; border-radius:50px; text-decoration:none; font-weight:600;">
-                       View my Certificate
+                       View Certificate
                     </a>
                 </div>
-                <div class="certificate-card" style="background-color: red;">
-                    <h4>Automata and Complex Theory</h4>
+                <div class="certificate-card">
+                    <h4>Automata and Complexity Theory</h4>
+                    <p>MindLuster • 2024</p>
                     <a href="https://www.mindluster.com/student/certificate/968465d8" target="_blank"
                        style="display:inline-block; margin-top:0.8rem; padding:0.6rem 1.4rem; background:var(--primary); color:black; border-radius:50px; text-decoration:none; font-weight:600;">
-                       View my Certificate
+                       View Certificate
                     </a>
                 </div>
             </div>
@@ -252,44 +291,44 @@
         <section id="contact">
             <div class="welcome-text"><u>You can reach me through the following platforms</u></div>
             <h2>Contact Me</h2>
-            <div class="card" style="text-align:center; max-width:900px; margin:2rem auto; padding:3rem 2rem;">
+            <div class="card" style="text-align:center; padding:3rem 2rem;">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2.5rem; margin: 3rem 0;">
-                    <a href="https://t.me/Hello_7565" target="_blank" style="text-decoration:none; color:white; transition:0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fab fa-telegram-plane" style="font-size:4.2rem; color:#0088cc; text-shadow: 0 0 20px #0088cc;"></i>
-                        <p style="margin-top:0.8rem; font-size:1.2rem; font-weight:600;">Telegram</p>
+                    <a href="https://t.me/Hello_7565" target="_blank" style="color:white; text-decoration:none;">
+                        <i class="fab fa-telegram-plane" style="font-size:4.2rem; color:#0088cc;"></i>
+                        <p style="margin-top:0.8rem; font-size:1.2rem;">Telegram</p>
                         <small>@Hello_7565</small>
                     </a>
-                    <a href="https://wa.me/251914795126" target="_blank" style="text-decoration:none; color:white; transition:0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fab fa-whatsapp" style="font-size:4.2rem; color:#25D366; text-shadow: 0 0 20px #25D366;"></i>
-                        <p style="margin-top:0.8rem; font-size:1.2rem; font-weight:600;">WhatsApp</p>
+                    <a href="https://wa.me/251914795126" target="_blank" style="color:white; text-decoration:none;">
+                        <i class="fab fa-whatsapp" style="font-size:4.2rem; color:#25D366;"></i>
+                        <p style="margin-top:0.8rem; font-size:1.2rem;">WhatsApp</p>
                         <small>+251 914 795 126</small>
                     </a>
-                    <a href="mailto:mulgetaemiru209@gmail.com" style="text-decoration:none; color:white; transition:0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fas fa-envelope" style="font-size:4.2rem; color:#FF5E5E; text-shadow: 0 0 20px #FF5E5E;"></i>
-                        <p style="margin-top:0.8rem; font-size:1.2rem; font-weight:600;">Email</p>
+                    <a href="mailto:mulgetaemiru209@gmail.com" style="color:white; text-decoration:none;">
+                        <i class="fas fa-envelope" style="font-size:4.2rem; color:#FF5E5E;"></i>
+                        <p style="margin-top:0.8rem; font-size:1.2rem;">Email</p>
                         <small>mulgetaemiru209@gmail.com</small>
                     </a>
-                    <a href="https://www.facebook.com/" target="_blank" style="text-decoration:none; color:white; transition:0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fab fa-facebook" style="font-size:4.2rem; color:#d4d9e1; text-shadow: 0 0 20px #1877F2;"></i>
-                        <p style="margin-top:0.8rem; font-size:1.2rem; font-weight:600;">Facebook</p>
+                    <a href="https://www.facebook.com/mulu12116ful" target="_blank" style="color:white; text-decoration:none;">
+                        <i class="fab fa-facebook" style="font-size:4.2rem; color:#1877F2;"></i>
+                        <p style="margin-top:0.8rem; font-size:1.2rem;">Facebook</p>
                         <small>@mulu12116ful</small>
                     </a>
-                    <a href="https://www.tiktok.com/" target="_blank" style="text-decoration:none; color:white; transition:0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fab fa-tiktok" style="font-size:4.2rem; color:red; text-shadow: 0 0 20px #FF0050;"></i>
-                        <p style="margin-top:0.8rem; font-size:1.2rem; font-weight:600;">TikTok</p>
+                    <a href="https://www.tiktok.com/@mulerzemeket626276" target="_blank" style="color:white; text-decoration:none;">
+                        <i class="fab fa-tiktok" style="font-size:4.2rem; color:#FF0050;"></i>
+                        <p style="margin-top:0.8rem; font-size:1.2rem;">TikTok</p>
                         <small>@mulerzemeket626276</small>
                     </a>
-                    <a href="tel:+251914795126" style="text-decoration:none; color:white; transition:0.3s;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <i class="fas fa-phone-alt" style="font-size:4.2rem; color:#00d4ff; text-shadow: 0 0 20px #00d4ff;"></i>
-                        <p style="margin-top:0.8rem; font-size:1.2rem; font-weight:600;">Call Me</p>
+                    <a href="tel:+251914795126" style="color:white; text-decoration:none;">
+                        <i class="fas fa-phone-alt" style="font-size:4.2rem; color:var(--primary);"></i>
+                        <p style="margin-top:0.8rem; font-size:1.2rem;">Call Me</p>
                         <small>+251 914 795 126</small>
                     </a>
                 </div>
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
-                    <p style="font-size:1.1rem; opacity:2;color: black;">
-                        Alternative Phone: <strong>+251 717 996 542</strong><br>
-                        <b>ተጨማሪ አድራሻችን</b><br>
-                        <b>አዲስ አበባ ፒያሳ አዳዋ መታሰቢያ አከባቢ በአካል ያገኙናል!</b>
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3); color: yellow;">
+                    <p style="font-size:1.1rem;">
+                        Alternative Phone: <strong>+251 717 996 542</strong><br><br>
+                        <b>ተጨማሪ አድራሻ</b><br>
+                        <b>አዲስ አበባ ፒያሳ አዳዋ መታሰቢያ አከባቢ – በአካል ይገ�ጡን!</b>
                     </p>
                 </div>
             </div>
@@ -297,30 +336,36 @@
     </main>
 
     <footer>
-        <p>© <span id="year"></span> <b>Designed and Built by Mulugeta Emiru</b></p>
+        <p>© <span id="year"></span> <strong>Designed and Built by Mulugeta Emiru</strong></p>
     </footer>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-        const observer = new IntersectionObserver(entries => {
+
+        // Re-play typing animation when section is visible
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const welcomes = entry.target.querySelectorAll('.welcome-text');
-                    welcomes.forEach(welcome => {
-                        welcome.style.animation = 'none';
-                        welcome.offsetHeight;
-                        welcome.style.animation = 'typing 3.8s steps(50) forwards, blink 0.8s infinite';
+                    entry.target.querySelectorAll('.welcome-text').forEach(text => {
+                        text.style.animation = 'none';
+                        text.offsetHeight; // trigger reflow
+                        text.style.animation = 'typing 3.8s steps(50) forwards, blink 0.8s infinite';
                     });
                 }
             });
         }, { threshold: 0.3 });
-        document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
     </script>
 </body>
 </html>
