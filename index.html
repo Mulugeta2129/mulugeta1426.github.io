@@ -96,27 +96,21 @@
             width: 0;
             animation: typing 3.8s steps(50) forwards, blink 0.8s infinite;
         }
-        @keyframes typing { 
-            from { width: 0; opacity: 1; } 
-            to { width: 100%; opacity: 1; } 
-        }
-        @keyframes blink { 
-            50% { border-color: transparent; } 
-        }
+        @keyframes typing { from { width: 0; opacity: 1; } to { width: 100%; opacity: 1; } }
+        @keyframes blink { 50% { border-color: transparent; } }
         h1 { font-size: 4.8rem; text-align: center; margin-bottom: 1rem; color: blue; }
         h2 { font-size: 2.8rem; text-align: center; margin: 4rem 0 2.5rem; color: var(--primary); }
-        .intro { text-align: center; font-size: 1.4rem; max-width: 900px; margin: 0 auto 4rem; }
 
-        /* Full image in Skills section */
-        .skills-photo {
+        /* ይህ በ�ሙሉ ፎቶ ለስኪልስ ሴክሽን ብቻ ነው – ክብ ሳይሆን ሙሉ አይነት */
+        .full-photo {
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             height: auto;
             border-radius: 20px;
-            border: 6px solid var(--primary);
-            box-shadow: 0 0 30px var(--primary);
+            border: 7px solid var(--primary);
+            box-shadow: 0 0 35px var(--primary);
             display: block;
-            margin: 2rem auto;
+            margin: 2.5rem auto;
         }
 
         .about-img {
@@ -137,7 +131,7 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
             margin: 2rem 0;
         }
-        .skill-item { margin: 1.3rem 0; }
+        .skill-item { margin: 1.4rem 0; }
         .skill-name { 
             display: flex; 
             justify-content: space-between; 
@@ -146,7 +140,7 @@
             color: white; 
         }
         .progress-bar { 
-            height: 14px; 
+            height: 16px; 
             background: rgba(255,255,255,0.2); 
             border-radius: 10px; 
             overflow: hidden; 
@@ -188,7 +182,8 @@
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; gap: 1rem; }
             .profile-img { width: 70px; height: 70px; }
-            .about-img, .skills-photo { width: 250px; height: auto; }
+            .about-img { width: 250px; height: 250px; }
+            .full-photo { max-width: 300px; }
             h1 { font-size: 3.5rem; }
             .welcome-text { font-size: 1.9rem; }
         }
@@ -197,6 +192,7 @@
 <body>
     <header>
         <div class="profile-left">
+            <!-- እዚህ ብቻ ክብ ሎጎ -->
             <img src="photo.jpg" alt="Mulugeta Emiru" class="profile-img">
             <div class="profile-name">Mulugeta Emiru</div>
         </div>
@@ -224,6 +220,7 @@
 
         <section id="about">
             <div class="welcome-text"><u>You can see personal information about me!</u></div>
+            <!-- እዚህ ክብ ፎቶ (ሎጎ መልክ) -->
             <img src="photo.jpg" alt="Mulugeta Emiru" class="about-img">
             <h2>My name is Mulugeta Emiru</h2>
             <div class="card" style="background-color: red; color:white; padding:2rem; border-radius: 15px;">
@@ -239,7 +236,7 @@
         <section id="goals">
             <div class="welcome-text"><u>These are my future Goals to achieve!</u></div>
             <h2>Learning Objectives & Future Goals</h2>
-            <div class="card" style="background-color: blue; color:white; padding:2.5rem; border-radius: 20px;">
+            <div class="card" style="background-color: blue; color:white; padding:2.5rem;">
                 <ul style="font-size:1.15rem; line-height:2; padding-left:2.5rem;">
                     <li>System Analyser</li>
                     <li>Full-stack developer</li>
@@ -255,7 +252,10 @@
         <section id="skills">
             <div class="welcome-text"><u>These are my Skills that I have learned!</u></div>
             <h2>Technical Skills</h2>
-            <img src="photo.jpg" alt="Mulugeta Emiru Full Photo" class="skills-photo">
+            
+            <!-- እዚህ ሙሉ ፎቶ (ክብ ሳይሆን እንደመጣ ሙሉ ሰይታይ) -->
+            <img src="photo.jpg" alt="Mulugeta Emiru Full Photo" class="full-photo">
+
             <div class="card" style="background-color: blue; color:white; padding:2rem;">
                 <div class="skill-item"><div class="skill-name">Data Analysis & Algorithm <span>90%</span></div><div class="progress-bar"><div class="progress" style="width:90%"></div></div></div>
                 <div class="skill-item"><div class="skill-name">HTML <span>95%</span></div><div class="progress-bar"><div class="progress" style="width:95%"></div></div></div>
@@ -269,6 +269,7 @@
             </div>
         </section>
 
+        <!-- ሌሎች ሴክሽኖች ሙሉ በሙሉ እንደቀድሞው ና�ሉ -->
         <section id="assignments">
             <div class="welcome-text"><u>These are My tasks I have done!</u></div>
             <h2>Assignments & Class Activities</h2>
@@ -295,7 +296,7 @@
         <section id="reflection">
             <div class="welcome-text"><u>Here is My Journey</u></div>
             <h2>Self-Reflection</h2>
-            <div class="card" style="background-color: blue; color:white; padding:2.5rem; border-radius: 20px;">
+            <div class="card" style="background-color: blue; color:white; padding:2.5rem;">
                 <p style="font-size:1.15rem; line-height:1.9;">
                     I started with zero knowledge and taught myself from different sources.
                     There were great challenges, but those challenges became my roadmap for the future.
@@ -340,7 +341,7 @@
         <section id="contact">
             <div class="welcome-text"><u>You can reach me through the following platforms</u></div>
             <h2>Contact Me</h2>
-            <div class="card" style="text-align:center; padding:3rem 2rem; background: rgba(255,255,255,0.15); border-radius: 25px;">
+            <div class="card" style="text-align:center; padding:3rem 2rem; background: rgba(255,255,0.15);">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2.5rem; margin: 3rem 0;">
                     <a href="https://t.me/Hello_7565" target="_blank" style="color:white; text-decoration:none;">
                         <i class="fab fa-telegram-plane" style="font-size:4.2rem; color:#0088cc;"></i>
@@ -391,7 +392,6 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -401,7 +401,6 @@
             });
         });
 
-        // Re-play typing animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
